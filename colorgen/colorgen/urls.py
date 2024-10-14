@@ -6,11 +6,12 @@ urlpatterns = [
     path('register/', register_user, name='register'),
     path('login/', login_user, name='login'),
     
-    # Path for creating (POST) and retrieving (GET) color hashes
+     
     path('get/', color_hash_list_create, name='colorhash-list-create'),
-     path('get/<int:id>', color_hash_list_create, name='colorhash-list-create'),
-    # Path for updating (PUT) and deleting (DELETE) color hashes by ID
-    path('update/<int:id>/', color_hash_update, name='colorhash-update'),
+    path('add/', color_hash_list_create, name='colorhash-list-create'), #adding color hash
+     path('get/<int:id>', color_hash_list_create, name='colorhash-list-create'), #getting by id
+     
+    path('update/<int:id>/', color_hash_update, name='colorhash-update'), #updating color hash by using id
 
 
     # JWT token endpoints
